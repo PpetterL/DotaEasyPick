@@ -32,5 +32,14 @@ jobs:
       - name: Put MSYS2 on PATH
         run: echo "C:/msys64" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
         
-      - name: Blank
-        run: msys2.exe "pacman -Syuu"
+      - name: MSYS2 Pacman
+        run: msys2.exe "pacman -Syuu" | msys2.exe "pacman -S --needed base-devel mingw-w64-i686-toolchain"
+        
+      - name: Config, Make and Make Install OpenSSL
+        run: msys2.exe "./openssl-3.0.2 perl Configure mingw no-shared no-asm --prefix=../" | msys2.exe "./openssl-3.0.2 make depend --prefix=../" | msys2.exe "./openssl-3.0.2 make --prefix=../" | msys2.exe "./openssl-3.0.2 make install --prefix=../"
+        
+      - name: Config, Make and Make Install zlib
+        run: msys2.exe "./zlib-1.2.12 make -f win32/Makefile.gcc -k BINARY_PATH=../bin INCLUDE_PATH=../include LIBRARY_PATH=../lib"
+        
+      - name: Config, Make and Make Install libcurl
+        run: msys2.exe "./libcurl-7.82.0/configure --with-openssl --prefix=../" | msys2.exe "./libcurl-7.82.0 make" | msys2.exe "./libcurl-7.82.0 make install"
