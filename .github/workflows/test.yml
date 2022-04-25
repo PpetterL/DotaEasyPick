@@ -37,8 +37,9 @@ jobs:
         run: msys2.exe -c 'pacman -Syuu' | msys2.exe -c 'pacman -S --needed base-devel mingw-w64-i686-toolchain'
         
       - name: MSYS2 Echo Test
-        shell: powershell
-        run: msys2.exe -c 'echo "Running in MSYS2!"'
+        shell: msys2 {0}
+        run: |
+          echo "Running in MSYS2!"
         
       # - name: Config, Make and Make Install OpenSSL
       #   run: msys2.exe "./openssl-3.0.2 perl Configure mingw no-shared no-asm --prefix=../" | msys2.exe "./openssl-3.0.2 make depend --prefix=../" | msys2.exe "./openssl-3.0.2 make --prefix=../" | msys2.exe "./openssl-3.0.2 make install --prefix=../"
