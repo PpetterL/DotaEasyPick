@@ -45,7 +45,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c 'pacman -S --needed base-devel mingw-w64-i686-gcc --noconfirm'
         
       - name: Config OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm --prefix=$GITHUB_WORKSPACE)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make Depend OpenSSL
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make depend)'
@@ -57,10 +57,10 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make install)'
         
       - name: Config, Make and Make Install zlib
-        run: C:/msys64/usr/bin/bash.exe -c '(cd zlib-1.2.12 && make -f win32/Makefile.gcc -k BINARY_PATH=$GITHUB_WORKSPACE/bin INCLUDE_PATH=$GITHUB_WORKSPACE/include LIBRARY_PATH=$GITHUB_WORKSPACE/lib)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd zlib-1.2.12 && make -f win32/Makefile.gcc -k BINARY_PATH=/d/a/DotaEasyPick/DotaEasyPick/bin INCLUDE_PATH=/d/a/DotaEasyPick/DotaEasyPick/include LIBRARY_PATH=/d/a/DotaEasyPick/DotaEasyPick/lib)'
         
       - name: Config libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && ./configure --with-openssl --prefix=$GITHUB_WORKSPACE)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make libcurl
         run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && make)'
