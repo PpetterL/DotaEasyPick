@@ -39,7 +39,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c "echo 'Running in MSYS2!'"
         
       - name: MSYS2_Echo_Test_2
-        shell: msys2bash.cmd
+        shell: msys2bash.cmd {0}
         run: echo 'Running in MSYS2!'
                 
       - name: MSYS2 Pacman
