@@ -39,8 +39,8 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c "echo 'Running in MSYS2!'"
         
       - name: MSYS2_Echo_Test_2
-        shell: msys2bash.cmd
         run: echo 'Running in MSYS2!'
+        shell: msys2bash.cmd
                 
       - name: MSYS2 Pacman
         run: C:/msys64/usr/bin/bash.exe -c 'pacman -Syuu' | C:/msys64/usr/bin/bash.exe -c 'pacman -S --needed base-devel mingw-w64-i686-toolchain'
