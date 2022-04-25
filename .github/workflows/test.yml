@@ -48,13 +48,13 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm --prefix=$GITHUB_WORKSPACE)'
         
       - name: Make Depend OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make depend --prefix=$GITHUB_WORKSPACE)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make depend)'
         
       - name: Make OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make --prefix=$GITHUB_WORKSPACE)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make)'
         
       - name: Make Install OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make install --prefix=$GITHUB_WORKSPACE)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make install)'
         
       - name: Config, Make and Make Install zlib
         run: C:/msys64/usr/bin/bash.exe -c '(cd zlib-1.2.12 && make -f win32/Makefile.gcc -k BINARY_PATH=$GITHUB_WORKSPACE/bin INCLUDE_PATH=$GITHUB_WORKSPACE/include LIBRARY_PATH=$GITHUB_WORKSPACE/lib)'
