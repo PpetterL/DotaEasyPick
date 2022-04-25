@@ -1,0 +1,30 @@
+--------------------
+./configure --prefix=/c/MinGW
+Sat Apr 16 19:02:23 CEST 2022
+Checking for gcc...
+=== ztest11432.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+gcc -c ztest11432.c
+... using gcc
+Please use win32/Makefile.gcc instead.
+** ./configure aborting.
+--------------------
+
+
+--------------------
+./configure --prefix=/c/MinGW
+Sat Apr 23 14:00:14 CEST 2022
+Checking for gcc...
+=== ztest1812.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+gcc -c ztest1812.c
+... using gcc
+Please use win32/Makefile.gcc instead.
+** ./configure aborting.
+--------------------
+
+
