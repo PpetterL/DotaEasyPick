@@ -48,25 +48,25 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm --prefix=$GITHUB_WORKSPACE)'
         
       - name: Make Depend OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c './openssl-3.0.2 make depend --prefix=../'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make depend --prefix=$GITHUB_WORKSPACE)'
         
       - name: Make OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c './openssl-3.0.2 make --prefix=../'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make --prefix=$GITHUB_WORKSPACE)'
         
       - name: Make Install OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c './openssl-3.0.2 make install --prefix=../'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make install --prefix=$GITHUB_WORKSPACE)'
         
       - name: Config, Make and Make Install zlib
-        run: C:/msys64/usr/bin/bash.exe -c './zlib-1.2.12 make -f win32/Makefile.gcc -k BINARY_PATH=../bin INCLUDE_PATH=../include LIBRARY_PATH=../lib'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd zlib-1.2.12 && make -f win32/Makefile.gcc -k BINARY_PATH=$GITHUB_WORKSPACE/bin INCLUDE_PATH=$GITHUB_WORKSPACE/include LIBRARY_PATH=$GITHUB_WORKSPACE/lib)'
         
       - name: Config libcurl
-        run: C:/msys64/usr/bin/bash.exe -c './libcurl-7.82.0/configure --with-openssl --prefix=../'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && ./configure --with-openssl --prefix=$GITHUB_WORKSPACE)'
         
       - name: Make libcurl
-        run: C:/msys64/usr/bin/bash.exe -c './libcurl-7.82.0 make'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && make)'
         
       - name: Make Install libcurl
-        run: C:/msys64/usr/bin/bash.exe -c './libcurl-7.82.0 make install'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && make install)'
         
       - name: Compile main.exe
         run: gcc.exe -Wall -o errorlog -fdiagnostics-color=always -g -Wl,--stack=268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -o main.exe
