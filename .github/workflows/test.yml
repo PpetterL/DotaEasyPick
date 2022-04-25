@@ -39,7 +39,8 @@ jobs:
       - name: MSYS2 Echo Test
         shell: msys2 {0}
         run: |
-          echo "Running in MSYS2!"
+            echo "Running in MSYS2!"
+            ./ci-build.sh
         
       # - name: Config, Make and Make Install OpenSSL
       #   run: msys2.exe "./openssl-3.0.2 perl Configure mingw no-shared no-asm --prefix=../" | msys2.exe "./openssl-3.0.2 make depend --prefix=../" | msys2.exe "./openssl-3.0.2 make --prefix=../" | msys2.exe "./openssl-3.0.2 make install --prefix=../"
