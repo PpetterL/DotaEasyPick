@@ -62,7 +62,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd lib/pkgconfig && ls -a)'     
      
       - name: Config libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && env PKG_CONFIG_PATH=$GITHUB_WORKSPACE/lib/pkgconfig ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && env PKG_CONFIG_PATH=$GITHUB_WORKSPACE/lib/pkgconfig ./configure --with-openssl=D:/a/DotaEasyPick/DotaEasyPick --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make libcurl
         run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make)'
@@ -72,3 +72,9 @@ jobs:
         
       - name: Compile main.exe
         run: gcc.exe -Wall -o errorlog -fdiagnostics-color=always -g -Wl,--stack=268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -o main.exe
+
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: config-log
+          path: D:/a/DotaEasyPick/DotaEasyPick/curl-7.82.0/config.log
