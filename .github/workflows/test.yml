@@ -61,11 +61,11 @@ jobs:
       - name: MSYS2_list_pkgconfig_files
         run: C:/msys64/usr/bin/bash.exe -c '(cd lib/pkgconfig && ls -a)'     
      
-      - name: Config libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && env PKG_CONFIG_PATH=$GITHUB_WORKSPACE/lib/pkgconfig ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
+     #  - name: Config libcurl
+     #    run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && env PKG_CONFIG_PATH=$GITHUB_WORKSPACE/lib/pkgconfig ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && mingw32-make mingw32-ssl-zlib)'
         
       - name: Make Install libcurl
         run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make install)'
