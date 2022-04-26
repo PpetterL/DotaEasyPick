@@ -44,7 +44,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c 'pacman -S --needed base-devel mingw-w64-i686-gcc --noconfirm'
         
       - name: Config OpenSSL
-        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm --prefix=D:/a/DotaEasyPick/DotaEasyPick --openssldir=D:/a/DotaEasyPick/DotaEasyPick)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm enable-capieng --prefix=D:/a/DotaEasyPick/DotaEasyPick --openssldir=D:/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make Depend OpenSSL
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && make depend)'
