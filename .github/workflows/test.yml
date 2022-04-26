@@ -60,13 +60,13 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd zlib-1.2.12 && make -f win32/Makefile.gcc -k BINARY_PATH=/d/a/DotaEasyPick/DotaEasyPick/bin INCLUDE_PATH=/d/a/DotaEasyPick/DotaEasyPick/include LIBRARY_PATH=/d/a/DotaEasyPick/DotaEasyPick/lib)'
         
       - name: Config libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && ./configure --with-openssl --prefix=/d/a/DotaEasyPick/DotaEasyPick)'
         
       - name: Make libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && make)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make)'
         
       - name: Make Install libcurl
-        run: C:/msys64/usr/bin/bash.exe -c '(cd libcurl-7.82.0 && make install)'
+        run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make install)'
         
       - name: Compile main.exe
         run: gcc.exe -Wall -o errorlog -fdiagnostics-color=always -g -Wl,--stack=268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -o main.exe
