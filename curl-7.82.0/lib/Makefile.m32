@@ -49,7 +49,7 @@ BROTLI_PATH = ../../brotli-1.0.1
 endif
 # Edit the path below to point to the base of your OpenSSL package.
 ifndef OPENSSL_PATH
-OPENSSL_PATH = ../../openssl-1.1.1n
+OPENSSL_PATH = ../../openssl-3.0.2
 endif
 # Edit the path below to point to the base of your LibSSH2 package.
 ifndef LIBSSH2_PATH
