@@ -71,7 +71,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c '(cd curl-7.82.0 && make install)'
         
       - name: Compile main.exe
-        run: gcc.exe -Wall -o errorlog -fdiagnostics-color=always -g -Wl,--stack,268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -o main.exe
+        run: gcc.exe --% -Wall -o errorlog -fdiagnostics-color=always -g -Wl,--stack,268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -o main.exe
 
       - uses: actions/upload-artifact@v3
         if: failure()

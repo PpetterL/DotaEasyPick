@@ -8,7 +8,7 @@
 
 #define JSON_FILE_PATH "test_matches.json"
 #define CACERT "cacert-2022-03-29.pem"
-#define JSON_URL "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?start_at_match_seq_num=5444708788&game_mode=22&min_players=10&key=8FD3BF79B10D16FF1228C01FE0E0B679"
+#define JSON_URL "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?start_at_match_seq_num=5444708788&game_mode=22&min_players=10&key="
 
 struct string {
   char *ptr;
@@ -119,7 +119,7 @@ void readfile(char *filepath, char *fileContent)
 
     if(fptr == NULL)
     {
-        printf("Error! Konnte Datei %s nicht öffnen!", fptr);
+        printf("Error! Konnte Datei %s nicht öffnen!", filepath);
         exit(1);
     }
 
@@ -170,7 +170,7 @@ void mycallback(int keylen, char *key, int valuelen, char *value){
 
     if(fptr == NULL)
     {
-        printf("Error! Konnte Datei %s nicht öffnen!", fptr);
+        printf("Error! Konnte Datei test_matches_parsed.json nicht öffnen!");
         exit(2);
     }
 
@@ -206,7 +206,7 @@ int parseJSON_old(char *URL, char *filepath, void callback(int, char *, int, cha
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
 
     if (resultCode < 0) {
-       printf("Failed to parse JSON: %d\n", resultCode);
+       printf("Failed to parse JSON: %ld\n", resultCode);
        return 1;
    }
 
@@ -300,7 +300,7 @@ int parseJSON_oldFile(unsigned long (*oldData)[150], char *filepath){
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
 
     if (resultCode < 0) {
-       printf("Failed to parse JSON: %d\n", resultCode);
+       printf("Failed to parse JSON: %ld\n", resultCode);
        return 1;
    }
 
@@ -336,12 +336,12 @@ void updateData(int *radiHero, int *direHero, int winningTeam, unsigned long (*n
         for (j = 0; j < 5; j++){
             if(radiHero[i] < direHero[j]){
                 newDataMatches[radiHero[i]][direHero[j]] += 1;
-                if(winningTeam = 1){
+                if(winningTeam == 1){
                     newDataWins[radiHero[i]][direHero[j]] += 1;
                 }
             } else {
                 newDataMatches[direHero[j]][radiHero[i]] += 1;
-                if(winningTeam = 0){
+                if(winningTeam == 0){
                     newDataWins[direHero[j]][radiHero[i]] += 1;
                 }
             }
@@ -383,7 +383,7 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
 
     if (resultCode < 0) {
-       printf("Failed to parse JSON: %d\n", resultCode);
+       printf("Failed to parse JSON: %ld\n", resultCode);
        return 1;
    }
 
@@ -467,7 +467,7 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
 
     if(fptr == NULL)
     {
-        printf("Error! Konnte Datei %s nicht öffnen!", fptr);
+        printf("Error! Konnte Datei Matches.json nicht öffnen!");
         exit(2);
     }
 
@@ -493,7 +493,7 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
 
     if(fptr2 == NULL)
     {
-        printf("Error! Konnte Datei %s nicht öffnen!", fptr2);
+        printf("Error! Konnte Datei Wins.json nicht öffnen!");
         exit(2);
     }
 
@@ -519,7 +519,7 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
 
     if(fptr3 == NULL)
     {
-        printf("Error! Konnte Datei %s nicht öffnen!", fptr3);
+        printf("Error! Konnte Datei Winrates.json nicht öffnen!");
         exit(2);
     }
 
@@ -558,11 +558,11 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
 
         if(fptr4 == NULL)
         {
-            printf("Error! Konnte Datei %s nicht öffnen!", fptr4);
+            printf("Error! Konnte Datei match_seq_num.txt nicht öffnen!");
             exit(2);
         }
 
-        fprintf(fptr4,"%llu\0", match_seq_num + 1);
+        fprintf(fptr4,"%llu", match_seq_num + 1);
 
         fclose(fptr4);
     }
