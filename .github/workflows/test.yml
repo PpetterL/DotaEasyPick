@@ -77,7 +77,7 @@ jobs:
         run: (ls && cd include && ls && cd ../lib && ls)
         
       - name: Compile main.exe
-        run: gcc.exe --% -Wall -o errorlog -fdiagnostics-color=always -static -g -I./include** -L./lib -Wl,--stack,268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -lssl -lcrypto -o main.exe
+        run: gcc.exe --% -Wall -o errorlog -fdiagnostics-color=always -static -g -I./include** -L./lib -Wl,--stack,268435456 main.c -lcurl -DCURL_STATICLIB -lws2_32 -lwldap32 -lwinmm -lgdi32 -lzstd -lzlib -lssl -lcrypto -lcrypt32 -o main.exe
 
       - uses: actions/upload-artifact@v3
         if: failure()
