@@ -4,7 +4,7 @@
 #include <winsock2.h>
 #include <windows.h>
 #include <curl/curl.h>
-#include "jsmn.h"
+#include "jsmn/jsmn.h"
 
 #define JSON_FILE_PATH "test_matches.json"
 #define CACERT "cacert-2022-03-29.pem"
