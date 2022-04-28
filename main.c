@@ -4,7 +4,7 @@
 #include <winsock2.h>
 #include <windows.h>
 #include <curl/curl.h>
-#include "jsmn/jsmn.h"
+#include "jsmn.h"
 
 #define JSON_FILE_PATH "test_matches.json"
 #define CACERT "cacert-2022-03-29.pem"
@@ -334,16 +334,11 @@ void updateData(int *radiHero, int *direHero, int winningTeam, unsigned long (*n
     int j;
     for (i = 0; i < 5; i++){
         for (j = 0; j < 5; j++){
-            if(radiHero[i] < direHero[j]){
-                newDataMatches[radiHero[i]][direHero[j]] += 1;
-                if(winningTeam == 1){
-                    newDataWins[radiHero[i]][direHero[j]] += 1;
-                }
-            } else {
-                newDataMatches[direHero[j]][radiHero[i]] += 1;
-                if(winningTeam == 0){
-                    newDataWins[direHero[j]][radiHero[i]] += 1;
-                }
+            if(winningTeam == 1){
+                newDataWins[radiHero[i]][direHero[j]] += 1;
+            }
+            if(winningTeam == 0){
+                newDataWins[direHero[j]][radiHero[i]] += 1;
             }
         }
     }
@@ -460,7 +455,8 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
             newDataWins[i][j] += oldDataWins[i][j];
         }
     }
-    
+
+    /*
     FILE *fptr;
 
     fptr = fopen("Matches.json","w");
@@ -486,6 +482,7 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
     fprintf(fptr, "}");
 
     fclose(fptr);
+    */
 
     FILE *fptr2;
 
@@ -513,6 +510,7 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
     
     fclose(fptr2);
 
+    /*
     FILE *fptr3;
 
     fptr3 = fopen("Winrates.json","w");
@@ -550,7 +548,8 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
     fprintf(fptr3, "}");
     
     fclose(fptr3);
-
+    */
+   
     if(match_seq_num != 0) {
         FILE *fptr4;
 
@@ -582,7 +581,7 @@ int main(int argc, char **argv){
         unsigned long long match_seq_num = 0;
 
         printf("Loop1\n");
-        parseJSON_oldFile(oldDataMatches, "Matches.json");
+        /* parseJSON_oldFile(oldDataMatches, "Matches.json"); */
         printf("Loop2\n");
         parseJSON_oldFile(oldDataWins, "Wins.json");
         printf("Loop3\n");
