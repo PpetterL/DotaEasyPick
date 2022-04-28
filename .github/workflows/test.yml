@@ -79,6 +79,11 @@ jobs:
       - name: Compile main.exe
         run: gcc.exe --% -Wall -o errorlog -fdiagnostics-color=always -static -g -I./include** -L./lib -Wl,--stack,268435456 main.c -lcurl -DCURL_STATICLIB -lwldap32 -lwinmm -lgdi32 -lzstd -lz -lssl -lcrypto -lcrypt32 -lws2_32 -o main.exe
 
+      - name: Run main.exe
+        env: 
+            STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: .\main.exe "$env:STEAM_API_KEY"
+        
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
