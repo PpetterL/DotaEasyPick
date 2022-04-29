@@ -84,8 +84,15 @@ jobs:
             STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: .\main.exe "$env:STEAM_API_KEY"
         
-      - uses: actions/upload-artifact@v3
-        if: failure()
+      - name: Commit files
+        run: |
+            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add match_seq_num.txt Wins.json
+            git commit -m "Autoupdate match_seq_num.txt and Wins.json"
+        shell: bash
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: config-log
-          path: D:/a/DotaEasyPick/DotaEasyPick/curl-7.82.0/config.log
+            github_token: ${{ secrets.GITHUB_TOKEN }}
