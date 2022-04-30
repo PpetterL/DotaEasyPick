@@ -3,6 +3,7 @@
 #include <string.h>
 #include <winsock2.h>
 #include <windows.h>
+#include <time.h>
 #include <curl/curl.h>
 #include "jsmn.h"
 
@@ -373,6 +374,8 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
     int winningTeam = 0;
     jsmn_parser p;
     jsmntok_t t[326144L]; // a number >= total number of tokens
+    time_t time_request;
+    time_request = time(NULL);
 
     jsmn_init(&p);
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
@@ -430,6 +433,10 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
                     updateData(radiHero, direHero, winningTeam, newDataMatches, newDataWins);
                     heroPos = 0;
                     *match_seq_num = strtoull(JSON_STRING.ptr + t[j + 1].start, NULL, 10);
+                } else if (jsoneq(JSON_STRING.ptr, &t[j], "start_time") == 0) {
+                    if (strtol(JSON_STRING.ptr + t[j + 1].start, NULL, 10) > time_request - 10800){
+                        return -1;
+                    } 
                 } else {
                 
                 }
@@ -571,9 +578,12 @@ int updateFiles(unsigned long (*oldDataMatches)[150], unsigned long (*oldDataWin
 
 int main(int argc, char **argv){
 
+    time_t time_prstrt;
+    time_t time_current;
+    time_prstrt = time(NULL);
     char *api_key = argv[1];
     int i = 0;
-    for(i = 0; i < 1000; i++){
+    while(time_current = time(NULL) < time_prstrt + 19800){
         unsigned long oldDataMatches[150][150] = {0};
         unsigned long oldDataWins[150][150] = {0};
         unsigned long newDataMatches[150][150] = {0};
@@ -591,6 +601,8 @@ int main(int argc, char **argv){
             printf("Loop5\n");
             updateFiles(oldDataMatches, oldDataWins, newDataMatches, newDataWins, match_seq_num);
             printf("Loop6\n");
+        } else if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == -1) {
+            return 0;
         }
         Sleep(3000);
     }
