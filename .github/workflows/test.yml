@@ -46,7 +46,7 @@ jobs:
         run: C:/msys64/usr/bin/bash.exe -c 'pacman -Syu --noconfirm'
         
       - name: MSYS2 Pacman Install Devel and MinGW
-        run: C:/msys64/usr/bin/bash.exe -c 'pacman -S --needed base-devel mingw-w64-i686-gcc --noconfirm'
+        run: C:/msys64/usr/bin/bash.exe -c 'pacman -Sy --needed base-devel mingw-w64-i686-gcc --noconfirm'
         
       - name: Config OpenSSL
         run: C:/msys64/usr/bin/bash.exe -c '(cd openssl-3.0.2 && perl Configure mingw no-shared no-asm enable-capieng -lcrypt32 --prefix=D:/a/DotaEasyPick/DotaEasyPick --openssldir=D:/a/DotaEasyPick/DotaEasyPick)'
