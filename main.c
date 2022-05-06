@@ -582,8 +582,7 @@ int main(int argc, char **argv){
     time_t time_current;
     time_prstrt = time(NULL);
     char *api_key = argv[1];
-    int i = 0;
-    while(time_current = time(NULL) < time_prstrt + 19800){
+    while((time_current = time(NULL)) < time_prstrt + 19800){
         unsigned long oldDataMatches[150][150] = {0};
         unsigned long oldDataWins[150][150] = {0};
         unsigned long newDataMatches[150][150] = {0};

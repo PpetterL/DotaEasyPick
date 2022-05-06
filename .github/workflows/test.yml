@@ -93,7 +93,7 @@ jobs:
             git stash
             git fetch
             git merge
-            git stash apply
+            git checkout stash -- .
             git add match_seq_num.txt Wins.json
             git commit -m "Autoupdate match_seq_num.txt and Wins.json"
         shell: bash
