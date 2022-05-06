@@ -479,7 +479,7 @@
 /* #undef HAVE_OLD_GSSMIT */
 
 /* Define to 1 if using OpenSSL 3 or later. */
-/* #undef HAVE_OPENSSL3 */
+#define HAVE_OPENSSL3 1
 
 /* Define to 1 if you have the <openssl/crypto.h> header file. */
 #define HAVE_OPENSSL_CRYPTO_H 1
@@ -816,7 +816,7 @@
 /* #undef NTLM_WB_FILE */
 
 /* cpu-machine-OS */
-#define OS "i686-w64-mingw32"
+#define OS "x86_64-pc-msys"
 
 /* Name of package */
 #define PACKAGE "curl"

@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='../bin/libcurl-4.dll'
+dlname=''
 
 # Names of this library.
-library_names='libcurl.dll.a'
+library_names=''
 
 # The name of the static archive.
 old_library='libcurl.a'
@@ -17,14 +17,14 @@ old_library='libcurl.a'
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -L=D:/msys64/mingw32/lib -ladvapi32 -lcrypt32 -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32'
+dependency_libs=' -L=D:/a/DotaEasyPick/DotaEasyPick/lib -ladvapi32 -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32 -lcrypt32'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
 
 # Version information for libcurl.
-current=11
-age=7
+current=0
+age=0
 revision=0
 
 # Is this an already installed library?
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/d/MinGW/lib'
+libdir='/d/a/DotaEasyPick/DotaEasyPick/lib'
