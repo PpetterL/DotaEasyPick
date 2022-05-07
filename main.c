@@ -75,7 +75,7 @@ int apireq(char *URL, struct string *apicontent){
     if(curl) {
         curl_easy_setopt(curl, CURLOPT_CAINFO, CACERT);
         curl_easy_setopt(curl, CURLOPT_URL, URL);
-        curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
+        curl_easy_setopt(curl, CURLOPT_VERBOSE, 0L);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, apicontent);
         curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, buffer);
@@ -381,13 +381,13 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
 
     if (resultCode < 0) {
-       printf("Failed to parse JSON: %ld\n", resultCode);
+       printf("Failed to parse JSON: %ld\n%s\n", resultCode, JSON_STRING);
        return 1;
    }
 
    /* Assume the top-level element is an object */
    if (resultCode < 1 || t[0].type != JSMN_OBJECT) {
-       printf("Object expected\n");
+       printf("Object expected\n%s\n", JSON_STRING);
        return 1;
    }
 
@@ -589,17 +589,11 @@ int main(int argc, char **argv){
         unsigned long newDataWins[150][150] = {0};
         unsigned long long match_seq_num = 0;
 
-        printf("Loop1\n");
         /* parseJSON_oldFile(oldDataMatches, "Matches.json"); */
-        printf("Loop2\n");
         parseJSON_oldFile(oldDataWins, "Wins.json");
-        printf("Loop3\n");
         API_URL(api_key);
-        printf("Loop4\n");
         if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == 0) {
-            printf("Loop5\n");
             updateFiles(oldDataMatches, oldDataWins, newDataMatches, newDataWins, match_seq_num);
-            printf("Loop6\n");
         } else if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == -1) {
             return 0;
         }
