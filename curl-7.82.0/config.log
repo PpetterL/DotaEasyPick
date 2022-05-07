@@ -1125,7 +1125,7 @@ configure: failed program was:
 configure:21722: result: no
 configure:21726: checking for gethostbyname
 configure:21726: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers   conftest.c -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccElzHDs.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc0v5Q6o.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname'
 collect2.exe: error: ld returned 1 exit status
 configure:21726: $? = 1
 configure: failed program was:
@@ -2014,7 +2014,7 @@ configure:23849: $? = 0
 configure:23860: result: yes
 configure:24084: checking for ldap_url_parse
 configure:24084: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include   -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc8mBN4L.o:conftest.c:(.text.startup+0xc): undefined reference to `ldap_url_parse'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc8fYImc.o:conftest.c:(.text.startup+0xc): undefined reference to `ldap_url_parse'
 collect2.exe: error: ld returned 1 exit status
 configure:24084: $? = 1
 configure: failed program was:
@@ -2090,7 +2090,7 @@ configure: failed program was:
 configure:24084: result: no
 configure:24090: checking for ldap_init_fd
 configure:24090: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include   -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccqPjNof.o:conftest.c:(.text.startup+0xc): undefined reference to `ldap_init_fd'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccCjWEMT.o:conftest.c:(.text.startup+0xc): undefined reference to `ldap_init_fd'
 collect2.exe: error: ld returned 1 exit status
 configure:24090: $? = 1
 configure: failed program was:
@@ -2238,7 +2238,7 @@ configure:25844: $? = 0
 configure:25844: result: yes
 configure:25920: checking for RAND_egd
 configure:25920: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include   -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccytZnDh.o:conftest.c:(.text.startup+0xc): undefined reference to `RAND_egd'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccEv2ifk.o:conftest.c:(.text.startup+0xc): undefined reference to `RAND_egd'
 collect2.exe: error: ld returned 1 exit status
 configure:25920: $? = 1
 configure: failed program was:
@@ -2523,7 +2523,7 @@ configure:28091: checking whether to use builtin CA store of SSL library
 configure:28106: result: no
 configure:28130: checking for library containing psl_builtin
 configure:28160: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccL0F2Jl.o:conftest.c:(.text.startup+0xc): undefined reference to `psl_builtin'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc25x9Xc.o:conftest.c:(.text.startup+0xc): undefined reference to `psl_builtin'
 collect2.exe: error: ld returned 1 exit status
 configure:28160: $? = 1
 configure: failed program was:
@@ -2694,7 +2694,7 @@ configure:28180: result: no
 configure:28193: WARNING: libpsl was not found
 configure:28221: checking for library containing gsasl_init
 configure:28251: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccAMnaCV.o:conftest.c:(.text.startup+0xc): undefined reference to `gsasl_init'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc0bUEYk.o:conftest.c:(.text.startup+0xc): undefined reference to `gsasl_init'
 collect2.exe: error: ld returned 1 exit status
 configure:28251: $? = 1
 configure: failed program was:
@@ -28093,7 +28093,7 @@ configure:35867: checking for fcntl.h
 configure:35867: result: yes
 configure:35883: checking if fcntl can be linked
 configure:35912: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccwl5QZI.o:conftest.c:(.text.startup+0xc): undefined reference to `fcntl'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccSBvlRa.o:conftest.c:(.text.startup+0xc): undefined reference to `fcntl'
 collect2.exe: error: ld returned 1 exit status
 configure:35912: $? = 1
 configure: failed program was:
@@ -28457,7 +28457,7 @@ configure: failed program was:
 configure:36477: result: no
 configure:36494: checking if fsetxattr can be linked
 configure:36523: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccApvyYR.o:conftest.c:(.text.startup+0xc): undefined reference to `fsetxattr'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc03aVxs.o:conftest.c:(.text.startup+0xc): undefined reference to `fsetxattr'
 collect2.exe: error: ld returned 1 exit status
 configure:36523: $? = 1
 configure: failed program was:
@@ -28690,7 +28690,7 @@ configure:37467: checking if gethostbyname might be used
 configure:37473: result: yes
 configure:37493: checking if gethostbyname_r can be linked
 configure:37522: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccco48Lw.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccQumGXR.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname_r'
 collect2.exe: error: ld returned 1 exit status
 configure:37522: $? = 1
 configure: failed program was:
@@ -29312,7 +29312,7 @@ configure: failed program was:
 configure:38429: result: no
 configure:38446: checking if getifaddrs can be linked
 configure:38475: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccC7Ef2R.o:conftest.c:(.text.startup+0xc): undefined reference to `getifaddrs'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccEipOCJ.o:conftest.c:(.text.startup+0xc): undefined reference to `getifaddrs'
 collect2.exe: error: ld returned 1 exit status
 configure:38475: $? = 1
 configure: failed program was:
@@ -29506,7 +29506,7 @@ configure:38721: checking for sys/time.h
 configure:38721: result: yes
 configure:38738: checking if gmtime_r can be linked
 configure:38767: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc8cWjKm.o:conftest.c:(.text.startup+0xc): undefined reference to `gmtime_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccoss8jy.o:conftest.c:(.text.startup+0xc): undefined reference to `gmtime_r'
 collect2.exe: error: ld returned 1 exit status
 configure:38767: $? = 1
 configure: failed program was:
@@ -29706,7 +29706,7 @@ configure:39036: checking for arpa/inet.h
 configure:39036: result: no
 configure:39053: checking if inet_ntop can be linked
 configure:39082: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccawJXSj.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntop'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccIsZY2q.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntop'
 collect2.exe: error: ld returned 1 exit status
 configure:39082: $? = 1
 configure: failed program was:
@@ -29899,7 +29899,7 @@ configure:39375: checking if inet_ntop might be used
 configure:39389: result: no
 configure:39402: checking if inet_pton can be linked
 configure:39431: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cckRBZx8.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_pton'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cccpE8aO.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_pton'
 collect2.exe: error: ld returned 1 exit status
 configure:39431: $? = 1
 configure: failed program was:
@@ -30290,7 +30290,7 @@ configure: failed program was:
 configure:39776: result: no
 configure:39792: checking if ioctl can be linked
 configure:39821: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccCdriB9.o:conftest.c:(.text.startup+0xc): undefined reference to `ioctl'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccsHDAfU.o:conftest.c:(.text.startup+0xc): undefined reference to `ioctl'
 collect2.exe: error: ld returned 1 exit status
 configure:39821: $? = 1
 configure: failed program was:
@@ -30517,7 +30517,7 @@ configure:40277: checking if ioctlsocket FIONBIO might be used
 configure:40281: result: yes
 configure:40306: checking if IoctlSocket can be linked
 configure:40335: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccqkihKm.o:conftest.c:(.text.startup+0xc): undefined reference to `IoctlSocket'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccOkdFeD.o:conftest.c:(.text.startup+0xc): undefined reference to `IoctlSocket'
 collect2.exe: error: ld returned 1 exit status
 configure:40335: $? = 1
 configure: failed program was:
@@ -30714,7 +30714,7 @@ configure:40431: checking if IoctlSocket might be used
 configure:40517: result: no
 configure:40530: checking if localtime_r can be linked
 configure:40559: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccEMJuhR.o:conftest.c:(.text.startup+0xc): undefined reference to `localtime_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccWuizRj.o:conftest.c:(.text.startup+0xc): undefined reference to `localtime_r'
 collect2.exe: error: ld returned 1 exit status
 configure:40559: $? = 1
 configure: failed program was:
@@ -30911,7 +30911,7 @@ configure:40768: checking if localtime_r might be used
 configure:40782: result: no
 configure:40795: checking if memrchr can be linked
 configure:40824: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccIOXYFD.o:conftest.c:(.text.startup+0xc): undefined reference to `memrchr'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc8qtWzZ.o:conftest.c:(.text.startup+0xc): undefined reference to `memrchr'
 collect2.exe: error: ld returned 1 exit status
 configure:40824: $? = 1
 configure: failed program was:
@@ -31742,7 +31742,7 @@ configure:41503: $? = 0
 configure:41503: result: yes
 configure:41519: checking if sigaction can be linked
 configure:41548: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccoGLk69.o:conftest.c:(.text.startup+0xc): undefined reference to `sigaction'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccYtYKSY.o:conftest.c:(.text.startup+0xc): undefined reference to `sigaction'
 collect2.exe: error: ld returned 1 exit status
 configure:41548: $? = 1
 configure: failed program was:
@@ -31942,7 +31942,7 @@ configure:41644: checking if sigaction might be used
 configure:41657: result: no
 configure:41669: checking if siginterrupt can be linked
 configure:41698: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccIlcOJE.o:conftest.c:(.text.startup+0xc): undefined reference to `siginterrupt'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccoMH1CC.o:conftest.c:(.text.startup+0xc): undefined reference to `siginterrupt'
 collect2.exe: error: ld returned 1 exit status
 configure:41698: $? = 1
 configure: failed program was:
@@ -32160,7 +32160,7 @@ configure:41979: checking for setjmp.h
 configure:41979: result: yes
 configure:41996: checking if sigsetjmp can be linked
 configure:42025: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccaLc30x.o:conftest.c:(.text.startup+0xc): undefined reference to `sigsetjmp'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccw8ulwl.o:conftest.c:(.text.startup+0xc): undefined reference to `sigsetjmp'
 collect2.exe: error: ld returned 1 exit status
 configure:42025: $? = 1
 configure: failed program was:
@@ -32584,7 +32584,7 @@ configure:42311: checking if socket might be used
 configure:42317: result: yes
 configure:42336: checking if socketpair can be linked
 configure:42365: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc0kKWiP.o:conftest.c:(.text.startup+0xc): undefined reference to `socketpair'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccODrWGI.o:conftest.c:(.text.startup+0xc): undefined reference to `socketpair'
 collect2.exe: error: ld returned 1 exit status
 configure:42365: $? = 1
 configure: failed program was:
@@ -32836,7 +32836,7 @@ configure:42914: checking if strdup might be used
 configure:42920: result: yes
 configure:42945: checking if strerror_r can be linked
 configure:42974: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccno1TVk.o:conftest.c:(.text.startup+0xc): undefined reference to `strerror_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccafcmzu.o:conftest.c:(.text.startup+0xc): undefined reference to `strerror_r'
 collect2.exe: error: ld returned 1 exit status
 configure:42974: $? = 1
 configure: failed program was:
@@ -33057,7 +33057,7 @@ configure:43593: checking if stricmp might be used
 configure:43599: result: yes
 configure:43618: checking if strncmpi can be linked
 configure:43647: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cckmHu6m.o:conftest.c:(.text.startup+0xc): undefined reference to `strncmpi'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cckG7pje.o:conftest.c:(.text.startup+0xc): undefined reference to `strncmpi'
 collect2.exe: error: ld returned 1 exit status
 configure:43647: $? = 1
 configure: failed program was:
@@ -33537,7 +33537,7 @@ configure:44378: checking for sys/uio.h
 configure:44378: result: no
 configure:44394: checking if writev can be linked
 configure:44423: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccc9rnGR.o:conftest.c:(.text.startup+0xc): undefined reference to `writev'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccEnAroQ.o:conftest.c:(.text.startup+0xc): undefined reference to `writev'
 collect2.exe: error: ld returned 1 exit status
 configure:44423: $? = 1
 configure: failed program was:
@@ -34155,7 +34155,7 @@ configure: failed program was:
 configure:44625: result: no
 configure:44650: checking for fnmatch
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cckCjb62.o:conftest.c:(.text.startup+0xc): undefined reference to `fnmatch'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cccO7a0E.o:conftest.c:(.text.startup+0xc): undefined reference to `fnmatch'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -34568,7 +34568,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for geteuid
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccm4reMo.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccwO6cD0.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -34981,7 +34981,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for getpass_r
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccOjXbHF.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccmcM6vP.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -35394,7 +35394,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for getppid
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccME8RIm.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccgz7l6m.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -35807,7 +35807,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for getpwuid
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccIj9V7F.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cckOwXkc.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -36220,7 +36220,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for getpwuid_r
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccQm9QpZ.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid_r'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccfbOERj.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid_r'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -36633,7 +36633,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for getrlimit
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccIPeMhj.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccSSIRFt.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -37050,7 +37050,7 @@ configure:44650: $? = 0
 configure:44650: result: yes
 configure:44650: checking for if_nametoindex
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cc20npJJ.o:conftest.c:(.text.startup+0xc): undefined reference to `if_nametoindex'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccQyxBft.o:conftest.c:(.text.startup+0xc): undefined reference to `if_nametoindex'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -37465,7 +37465,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for mach_absolute_time
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccYugprm.o:conftest.c:(.text.startup+0xc): undefined reference to `mach_absolute_time'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccYrWdnR.o:conftest.c:(.text.startup+0xc): undefined reference to `mach_absolute_time'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -37880,7 +37880,7 @@ configure: failed program was:
 configure:44694: result: but still no
 configure:44650: checking for pipe
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccYByEaB.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccMjxtof.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -38303,7 +38303,7 @@ configure:44650: $? = 0
 configure:44650: result: yes
 configure:44650: checking for setrlimit
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccMJG7Zm.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cciAeHax.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
@@ -38730,7 +38730,7 @@ configure:44650: $? = 0
 configure:44650: result: yes
 configure:44650: checking for utimes
 configure:44650: gcc -o conftest.exe -Werror-implicit-function-declaration -O2 -Wno-system-headers  -ID:/a/DotaEasyPick/DotaEasyPick/include  -ID:/a/DotaEasyPick/DotaEasyPick/include  -DOPENSSL_SUPPRESS_DEPRECATED  -LD:/a/DotaEasyPick/DotaEasyPick/lib  -LD:/a/DotaEasyPick/DotaEasyPick/lib  conftest.c -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto  -lgdi32 -lwldap32 -lzstd  -lz -lws2_32 -lcrypt32 >&5
-C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\cccy8kWp.o:conftest.c:(.text.startup+0xc): undefined reference to `utimes'
+C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/11.3.0/../../../../i686-w64-mingw32/bin/ld.exe: C:\Users\RUNNER~1\AppData\Local\Temp\ccyLqQpi.o:conftest.c:(.text.startup+0xc): undefined reference to `utimes'
 collect2.exe: error: ld returned 1 exit status
 configure:44650: $? = 1
 configure: failed program was:
