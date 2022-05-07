@@ -11,7 +11,7 @@
  */
 
 #define PLATFORM "platform: mingw"
-#define DATE "built on: Fri May  6 15:01:40 2022 UTC"
+#define DATE "built on: Sat Apr 16 09:23:10 2022 UTC"
 
 /*
  * Generate compiler_flags as an array of individual characters. This is a

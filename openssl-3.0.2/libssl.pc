@@ -1,4 +1,4 @@
-prefix=D:/a/DotaEasyPick/DotaEasyPick
+prefix=/c/OpenSSL
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

@@ -9,7 +9,7 @@ use File::Spec::Functions;
 BEGIN {
     # This method corresponds exactly to 'use OpenSSL::Util',
     # but allows us to use a platform specific file spec.
-    require '/d/a/DotaEasyPick/DotaEasyPick/openssl-3.0.2/util/perl/OpenSSL/Util.pm';
+    require '/d/Benutzer/Frederic/Documents/C_Libraries/openssl-3.0.2/util/perl/OpenSSL/Util.pm';
     OpenSSL::Util->import();
 }
 
@@ -20,7 +20,7 @@ my $std_openssl_conf = catdir($there, 'apps/openssl.cnf');
 my $unix_shlib_wrap = catfile($there, 'util/shlib_wrap.sh');
 
 if ($ARGV[0] eq '-fips') {
-    $std_openssl_conf = '/d/a/DotaEasyPick/DotaEasyPick/openssl-3.0.2/test/fips-and-base.cnf';
+    $std_openssl_conf = '/d/Benutzer/Frederic/Documents/C_Libraries/openssl-3.0.2/test/fips-and-base.cnf';
     shift;
 
     my $std_openssl_conf_include = catdir($there, 'providers');

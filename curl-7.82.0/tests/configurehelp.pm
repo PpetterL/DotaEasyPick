@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'gcc -E -isystem D:/a/DotaEasyPick/DotaEasyPick/include -isystem D:/a/DotaEasyPick/DotaEasyPick/include -DOPENSSL_SUPPRESS_DEPRECATED';
+$Cpreprocessor = 'gcc -E -isystem D:/msys64/mingw32/include -isystem D:/msys64/mingw32/include';
 
 1;

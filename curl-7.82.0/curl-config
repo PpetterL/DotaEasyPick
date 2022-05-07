@@ -21,10 +21,10 @@
 #
 ###########################################################################
 
-prefix=/d/a/DotaEasyPick/DotaEasyPick
+prefix=/d/msys64/mingw32
 exec_prefix=${prefix}
 includedir=${prefix}/include
-cppflag_curl_staticlib=-DCURL_STATICLIB
+cppflag_curl_staticlib=
 
 usage()
 {
@@ -68,7 +68,7 @@ while test $# -gt 0; do
 
     case "$1" in
     --built-shared)
-        echo no
+        echo yes
         ;;
 
     --ca)
@@ -160,19 +160,19 @@ while test $# -gt 0; do
         else
            CURLLIBDIR=""
         fi
-        if test "Xno" = "Xno"; then
-          echo ${CURLLIBDIR}-lcurl -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32 -lcrypt32
+        if test "Xyes" = "Xno"; then
+          echo ${CURLLIBDIR}-lcurl -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32
         else
           echo ${CURLLIBDIR}-lcurl
         fi
         ;;
     --ssl-backends)
-        echo "OpenSSL v3+"
+        echo "OpenSSL"
         ;;
 
     --static-libs)
         if test "Xyes" != "Xno" ; then
-          echo ${exec_prefix}/lib/libcurl.a -LD:/a/DotaEasyPick/DotaEasyPick/lib -LD:/a/DotaEasyPick/DotaEasyPick/lib -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32 -lcrypt32
+          echo ${exec_prefix}/lib/libcurl.a -LD:/msys64/mingw32/lib -LD:/msys64/mingw32/lib -ladvapi32 -lcrypt32 -lssl -lcrypto -lssl -lcrypto -lgdi32 -lwldap32 -lzstd -lz -lws2_32
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1
@@ -180,7 +180,7 @@ while test $# -gt 0; do
         ;;
 
     --configure)
-        echo " '--with-zlib=D:/a/DotaEasyPick/DotaEasyPick' '--with-openssl=D:/a/DotaEasyPick/DotaEasyPick' '--prefix=/d/a/DotaEasyPick/DotaEasyPick' 'LIBS=-lcrypt32'"
+        echo " '--with-openssl' '--prefix=/d/msys64/mingw32'"
         ;;
 
     *)
