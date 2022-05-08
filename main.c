@@ -381,13 +381,13 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
     resultCode = jsmn_parse(&p, JSON_STRING.ptr, JSON_STRING.len, t, sizeof(t)/(sizeof(t[0])));
 
     if (resultCode < 0) {
-       printf("Failed to parse JSON: %ld\n%s\n", resultCode, JSON_STRING);
+       printf("Failed to parse JSON: %ld\n%s\n", resultCode, JSON_STRING.ptr);
        return 1;
    }
 
    /* Assume the top-level element is an object */
    if (resultCode < 1 || t[0].type != JSMN_OBJECT) {
-       printf("Object expected\n%s\n", JSON_STRING);
+       printf("Object expected\n%s\n", JSON_STRING.ptr);
        return 1;
    }
 
@@ -581,7 +581,9 @@ int main(int argc, char **argv){
     time_t time_prstrt;
     time_t time_current;
     time_prstrt = time(NULL);
+    unsigned int keyswitch = 0;
     char *api_key = argv[1];
+    char *api_key2 = argv[2];
     while((time_current = time(NULL)) < time_prstrt + 19800){
         unsigned long oldDataMatches[150][150] = {0};
         unsigned long oldDataWins[150][150] = {0};
@@ -591,7 +593,16 @@ int main(int argc, char **argv){
 
         /* parseJSON_oldFile(oldDataMatches, "Matches.json"); */
         parseJSON_oldFile(oldDataWins, "Wins.json");
-        API_URL(api_key);
+        if(keyswitch == 0) {
+            API_URL(api_key);
+            keyswitch = 1;
+        } else if(keyswitch == 1) {
+            API_URL(api_key2);
+            keyswitch = 0;
+        } else {
+            printf("Keyswitch error!");
+            return 0;
+        }
         if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == 0) {
             updateFiles(oldDataMatches, oldDataWins, newDataMatches, newDataWins, match_seq_num);
         } else if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == -1) {

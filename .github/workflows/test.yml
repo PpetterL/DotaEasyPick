@@ -84,7 +84,8 @@ jobs:
       - name: Run main.exe
         env: 
             STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-        run: .\main.exe "$env:STEAM_API_KEY"
+            STEAM_API_KEY2: ${{ secrets.STEAM_API_KEY2 }}
+        run: .\main.exe "$env:STEAM_API_KEY" "$env:STEAM_API_KEY2"
         
       - name: Commit files
         run: |
