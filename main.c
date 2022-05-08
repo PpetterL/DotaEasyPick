@@ -608,7 +608,7 @@ int main(int argc, char **argv){
         } else if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == -1) {
             return 0;
         }
-        Sleep(3000);
+        Sleep(2000);
     }
     
     /*
