@@ -584,6 +584,7 @@ int main(int argc, char **argv){
     unsigned int keyswitch = 0;
     char *api_key = argv[1];
     char *api_key2 = argv[2];
+	int reqRes;
     while((time_current = time(NULL)) < time_prstrt + 19800){
         unsigned long oldDataMatches[150][150] = {0};
         unsigned long oldDataWins[150][150] = {0};
@@ -603,9 +604,10 @@ int main(int argc, char **argv){
             printf("Keyswitch error!");
             return 0;
         }
-        if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == 0) {
+		reqRes = parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins);
+        if(reqRes == 0) {
             updateFiles(oldDataMatches, oldDataWins, newDataMatches, newDataWins, match_seq_num);
-        } else if(parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins) == -1) {
+        } else if(reqRes == -1) {
             return 0;
         }
         Sleep(2000);
