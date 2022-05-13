@@ -11,8 +11,6 @@
 #define CACERT "cacert-2022-03-29.pem"
 #define JSON_URL "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?start_at_match_seq_num=5444708788&game_mode=22&min_players=10&key="
 
-char URL[200] = "";
-
 struct string {
   char *ptr;
   size_t len;
@@ -67,7 +65,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, struct string *JSON_STRIN
   return size*nmemb;
 }
 
-int apireq(char *URL, struct string *apicontent, char *proxy_urls){
+int apireq(char *URL, struct string *apicontent){
     CURL *curl;
     CURLcode response;
     char buffer[CURL_ERROR_SIZE + 1];
@@ -77,14 +75,11 @@ int apireq(char *URL, struct string *apicontent, char *proxy_urls){
     if(curl) {
         curl_easy_setopt(curl, CURLOPT_CAINFO, CACERT);
         curl_easy_setopt(curl, CURLOPT_URL, URL);
-        curl_easy_setopt(curl, CURLOPT_PROXY, proxy_urls);
-        curl_easy_setopt(curl, CURLOPT_HEADER, 0);
         curl_easy_setopt(curl, CURLOPT_VERBOSE, 0L);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, apicontent);
         curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, buffer);
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 2);
-        curl_easy_setopt(curl, CURLOPT_PROXY_SSL_VERIFYPEER, 0);
 
         /*
         curl_version_info_data *ver = curl_version_info(CURLVERSION_NOW);
@@ -196,7 +191,7 @@ int parseJSON_old(char *URL, char *filepath, void callback(int, char *, int, cha
     init_string(&JSON_STRING);
 
     // readtestfile(filepath, JSON_STRING.ptr);
-    // apireq(URL, &JSON_STRING);
+    apireq(URL, &JSON_STRING);
 
     long i;
     long j;
@@ -279,6 +274,8 @@ int parseJSON_old(char *URL, char *filepath, void callback(int, char *, int, cha
 
 }
 
+char URL[200] = "";
+
 int parseJSON_oldFile(unsigned long (*oldData)[150], char *filepath){
     
     // char JSON_STRING[2097152L];
@@ -354,7 +351,7 @@ void API_URL(char *api_key){
     strcat(strcat(strcat(strcpy(URL, "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/V001/?start_at_match_seq_num="), match_seq_num_old), "&game_mode=22&min_players=10&key="), api_key);
 }
 
-int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, unsigned long (*newDataMatches)[150], unsigned long (*newDataWins)[150], char *proxy_urls){
+int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, unsigned long (*newDataMatches)[150], unsigned long (*newDataWins)[150]){
     
     // char JSON_STRING[2097152L];
 
@@ -362,7 +359,7 @@ int parseJSON_API(char *URL, char *filepath, unsigned long long *match_seq_num, 
     init_string(&JSON_STRING);
 
     // readtestfile(filepath, JSON_STRING.ptr);
-    apireq(URL, &JSON_STRING, proxy_urls);
+    apireq(URL, &JSON_STRING);
 
     long i;
     long j;
@@ -587,28 +584,7 @@ int main(int argc, char **argv){
     unsigned int keyswitch = 0;
     char *api_key = argv[1];
     char *api_key2 = argv[2];
-    char *proxy_urls[18] = {
-        "https://us-east-109.whiskergalaxy.com:443",
-        "https://us-east-091.whiskergalaxy.com:443",
-        "https://us-east-108.whiskergalaxy.com:443",
-        "https://us-east-076.whiskergalaxy.com:443",
-        "https://us-east-069.whiskergalaxy.com:443",
-        "https://us-east-033.whiskergalaxy.com:443",
-        "https://us-east-070.whiskergalaxy.com:443",
-        "https://us-east-085.whiskergalaxy.com:443",
-        "https://us-east-066.whiskergalaxy.com:443",
-        "https://us-east-087.whiskergalaxy.com:443",
-        "https://us-east-014.whiskergalaxy.com:443",
-        "https://us-east-001.whiskergalaxy.com:443",
-        "https://us-east-072.whiskergalaxy.com:443",
-        "https://us-east-104.whiskergalaxy.com:443",
-        "https://us-east-031.whiskergalaxy.com:443",
-        "https://us-east-102.whiskergalaxy.com:443",
-        "https://us-east-075.whiskergalaxy.com:443",
-        "https://us-east-063.whiskergalaxy.com:443"};
-    unsigned int proxy_counter = 0;
-    int reqRes;
-
+	int reqRes;
     while((time_current = time(NULL)) < time_prstrt + 19800){
         unsigned long oldDataMatches[150][150] = {0};
         unsigned long oldDataWins[150][150] = {0};
@@ -628,15 +604,13 @@ int main(int argc, char **argv){
             printf("Keyswitch error!");
             return 0;
         }
-        reqRes = parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins, proxy_urls[proxy_counter]);
+		reqRes = parseJSON_API(URL, JSON_FILE_PATH, &match_seq_num, newDataMatches, newDataWins);
         if(reqRes == 0) {
             updateFiles(oldDataMatches, oldDataWins, newDataMatches, newDataWins, match_seq_num);
         } else if(reqRes == -1) {
             return 0;
         }
-        if(proxy_counter < 17) {
-            proxy_counter++;
-        } else proxy_counter = 0;
+        Sleep(2000);
     }
     
     /*
